@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  margin: 5px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user {
+  width: 700px;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-info {
+  width: fit-content;
+  padding: 5px;
+  margin: 10px;
+  text-align: left;
+}
+
+
+.info {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: fit-content;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+}

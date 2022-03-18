@@ -1,0 +1,29 @@
+<div *ngFor="let user of users" class="users">
+  <div class="user" [id]="user.id">
+    <div class="basic-info">
+      <h2>{{ user.name }}</h2>
+      <hr>
+      <p><b>Username:</b> {{ user.username }}</p>
+      <p><b>Phone:</b> {{ user.phone }}</p>
+      <p><b>Email:</b> {{ user.email }}</p>
+      <p><b>Website:</b> {{ user.website }}</p>
+      <a (click)="goToAlbums(user.id)">Albums</a>
+      <a (click)="goToTodos(user.id)">Todos</a>
+      <a (click)="goToPosts(user.id)">Posts</a>
+    </div>
+    <div class="info">
+      <h3>Address Info</h3>
+      <p>Street: {{ user.address.street }}</p>
+      <p>Suite: {{ user.address.suite }}</p>
+      <p>City: {{ user.address.city }}</p>
+      <p>Zipcode: {{ user.address.zipcode }}</p>
+      <p>Geo: {{ user.address.geo.lat }}, {{ user.address.geo.lng }}</p>
+    </div>
+    <div class="info">
+      <h3>Company Info</h3>
+      <p>Name: {{ user.company.name }}</p>
+      <p>CatchPhrase: {{ user.company.catchPhrase }}</p>
+      <p>BS: {{ user.company.bs }}</p>
+    </div>
+  </div>
+</div>
