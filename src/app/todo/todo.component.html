@@ -1,4 +1,7 @@
+<button class="add" (click)="addTodo()">Add Todo</button>
+<hr>
 <div *ngFor="let todo of todos">
+  <!-- <button class="add" (click)="addTodo(todo.userId)">Add Todo</button> -->
   <b>Todo Title: </b> {{ todo.title }}<br>
   <label for="checkbox">Completed: {{ todo.completed }}</label>
   <input
@@ -8,5 +11,7 @@
   (change)="todo.completed = !todo.completed"
   [checked]="todo.completed"
   >
+  <button class="delete" (click)="deleteTodo(todo.id)">Delete</button>
+  <button class="edit" (click)="editTodo(todo.id)">Edit</button>
   <hr>
 </div>

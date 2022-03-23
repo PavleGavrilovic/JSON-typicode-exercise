@@ -1,3 +1,29 @@
 div {
   margin: 10px;
 }
+
+.delete {
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.edit {
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.add {
+  height: 30px;
+  width: 80px;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}

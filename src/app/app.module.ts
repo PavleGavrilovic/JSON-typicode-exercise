@@ -7,6 +7,8 @@ import { TodoComponent } from './todo/todo.component';
 import { PostComponent } from './post/post.component';
 import { UsersComponent } from './users/users.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PhotoComponent } from './photo/photo.component';
+import { CommentsComponent } from './comments/comments.component';
 
 
 
@@ -18,7 +20,9 @@ import { AppRoutingModule } from './app-routing.module';
     AlbumComponent,
     TodoComponent,
     PostComponent,
-    UsersComponent
+    UsersComponent,
+    PhotoComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
