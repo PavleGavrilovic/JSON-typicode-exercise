@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Todo } from '../interfaces/todo-model';
-import { TodoPut } from '../interfaces/todoPut-model';
 import { UsersService } from '../users.service';
 
 
@@ -25,12 +24,11 @@ export class TodoComponent implements OnInit {
   }
 
   deleteTodo(id:string) {
-    this.usersService.deleteTodo(id).subscribe((responseData)=>{
+    this.usersService.deleteTodo(id).subscribe((responseData):void =>{
       console.log(responseData)
+      console.log(this.todos)
+      this.todos=this.todos.filter((data:Todo)=>data.id !==+id)
     })
-    // this.usersService.id=id.toString();
-    // this.usersService.deleteTodo().subscribe(responseData=>console.log(responseData))
-    // this.todos=this.todos.filter((d)=>d.id !==id)
   }
 
   editTodo(id:string) {
@@ -43,8 +41,12 @@ export class TodoComponent implements OnInit {
   addTodo() {
     const id=this.route.snapshot.params['id'];
       this.usersService.addTodo(id)
-      .subscribe(data=>{
+      .subscribe((data:Todo):void =>{
       console.log(data)
+      this.todos=[
+        data,
+        ...this.todos
+      ]
     })
   }
 }
